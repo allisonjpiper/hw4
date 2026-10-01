@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Campus Customs — App Check (Problem 11)</title>
+<style>
+  :root {
+    --navy: #00356b;
+    --light-blue: #4a7fb5;
+    font: 16px/1.6 -apple-system, 'Segoe UI', system-ui, Roboto, Helvetica, Arial, sans-serif;
+  }
+  body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+    color: #222;
+  }
+  header {
+    background: var(--light-blue);
+    color: #fff;
+    padding: 1.1rem 1.4rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+  header h1 {
+    margin: 0 0 0.3rem;
+    font-size: 1.2rem;
+  }
+  header p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.95;
+  }
+  section {
+    margin-top: 2rem;
+  }
+  h2 {
+    color: var(--navy);
+    font-size: 1.05rem;
+    border-bottom: 2px solid #eef1f6;
+    padding-bottom: 0.4rem;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0.75rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  p.caption {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Campus Customs — App Check</h1>
+  <p>Manual test of the running app, per Problem 11.</p>
+</header>
+
+<section>
+  <h2>1. Chat checking inventory level (honest stock/price from the DB)</h2>
+  <img src="app_check_images/inventory.png" alt="Chat answering an inventory-level question with real per-size stock and price" />
+  <p class="caption">Asking the chat "what is the inventory level of this tshirt" returns the real per-size stock counts and price for the 2025 Yale Vs Harvard T Shirt, pulled directly from <code>campus_customs.db</code> rather than guessed.</p>
+</section>
+
+<section>
+  <h2>2. Dynamic search-result cards after a category question</h2>
+  <img src="app_check_images/hoodies.png" alt="Products page updated with matching hoodie cards after asking the chat assistant" />
+  <p class="caption">Asking "show me the hoodies" triggers the category-lookup tool, and the Products page updates live to show only matching hoodie cards — the chat and the page stay in sync automatically.</p>
+</section>
+
+<section>
+  <h2>3. A Problem 9 usability feature: Fan Favorites on the homepage</h2>
+  <img src="app_check_images/fanfavorites.png" alt="Homepage Fan Favorites section showing three clickable Yale products" />
+  <p class="caption">The homepage now features three Fan Favorites — the Basic Hoodie Big Yale, the 2025 Yale Vs Harvard tee, and the Boola Boola tee — using the shop's own product photos, and each card links straight to that product's page. First-time visitors get an immediate way into the catalogue instead of a wall of text.</p>
+</section>
+
+</body>
+</html>

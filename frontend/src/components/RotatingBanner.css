@@ -1,0 +1,49 @@
+.rotating-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.rotating-banner__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.rotating-banner__slide--active {
+  opacity: 1;
+}
+
+.rotating-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 53, 107, 0.55), rgba(0, 53, 107, 0.75));
+}
+
+.rotating-banner__dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.rotating-banner__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--cc-white);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.rotating-banner__dot--active {
+  background: var(--cc-white);
+}

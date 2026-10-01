@@ -1,0 +1,28 @@
+# Secrets - only .env.example is committed
+.env
+.env.*
+!.env.example
+
+# Local-only data pack (database + product images)
+data/
+*.db
+*.sqlite3
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Node / Vite
+node_modules/
+frontend/dist/
+
+# Editor / OS / tooling
+.DS_Store
+.claude/
+*.log
+*.tmp
+
+# Screenshots not linked from app_check.html (kept locally)
+output/app_check_images/*.webp
